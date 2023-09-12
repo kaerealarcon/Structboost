@@ -6,6 +6,10 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
 }
 
+header .btn-mobile {
+    display: none;
+}
+
 header .container {
     display: flex;
     align-items: center;
@@ -13,7 +17,7 @@ header .container {
 }
 
 header nav {
-    display: flex;    
+    display: flex;
     align-items: center;
     gap: 3.2rem;
 }
@@ -38,13 +42,13 @@ header nav ul a:hover {
     position: relative;
     width: 100%;
     padding-top: 11.3rem;
-    display: flex;    
+    display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
 }
 
-.s-hero::after{
+.s-hero::after {
     content: "";
     width: 100%;
     height: 22rem;
@@ -70,7 +74,7 @@ header nav ul a:hover {
     letter-spacing: -1.68px;
 }
 
-.s-hero .text h1::before{
+.s-hero .text h1::before {
     content: "";
     width: 100%;
     max-width: 59.9rem;
@@ -99,6 +103,10 @@ header nav ul a:hover {
 
 .s-hero .ilustra {
     padding: 0 1.5rem;
+}
+
+.s-hero .ilustra-mobile {
+    display: none;
 }
 
 .s-digital {
@@ -148,7 +156,7 @@ header nav ul a:hover {
 
 .s-art-front .title-text .left p {
     max-width: 45.2rem;
-} 
+}
 
 .s-art-front .title-text .right {
     max-width: 42.9rem;
@@ -232,7 +240,7 @@ footer .main-area .right .item-nav ul li a {
     gap: 1.8rem;
 }
 
-footer .main-area .right .item-nav ul li a:hover{
+footer .main-area .right .item-nav ul li a:hover {
     color: var(--gray-100);
 }
 
@@ -251,4 +259,273 @@ footer .copy {
 
 footer .copy strong {
     font-weight: 600;
+}
+
+/* 1200px monitor */
+@media(max-width: 1200px) {
+    .s-digital {
+        padding-top: 6.8rem;
+    }
+
+    .s-digital ul {
+        gap: 3.2rem;
+        padding-bottom: 6.8rem;
+    }
+
+    .s-digital .info h6 {
+        font-size: 2rem;
+    }
+
+    .s-digital .info p {
+        font-size: 1.6rem;
+    }
+
+    .s-art-front .all {
+        gap: 1.6rem;
+    }
+
+    .s-art-front .all .card-post:first-child,
+    .s-art-front .all .card-post:nth-child(2) {
+        grid-column: span 3;
+    }
+
+    footer .main-area .right {
+        max-width: 66.2rem;
+    }
+}
+
+/* 991px monitor */
+@media(max-width: 991px) {
+    .s-hero::after {
+        height: 13rem;
+    }
+
+    .s-digital ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .s-art-front .title-text {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .s-art-front .title-text .left {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .s-art-front .title-text .left p {
+        max-width: 100%;
+        margin-top: 8px;
+    }
+
+    .s-art-front .title-text .right {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .s-art-front .all {
+        grid-template-columns: 1fr;
+    }
+
+    .s-art-front .all .card-post:first-child,
+    .s-art-front .all .card-post:nth-child(2) {
+        grid-column: initial;
+    }
+
+    footer .main-area {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    footer .main-area .left {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    footer .main-area .left img {
+        margin: 0 auto;
+    }
+
+    footer .main-area .right {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* 768px monitor */
+@media(max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    header .btn-mobile {
+        display: block;
+    }
+
+    .s-hero {
+        padding-top: 6rem;
+    }
+
+    .s-hero .text h1 {
+        max-width: 49rem;
+        margin: 0 auto;
+    }
+
+    .s-hero .text h1::before {
+        left: 0;
+        bottom: -4px;
+        background-size: 100%;
+    }
+
+    .s-hero .text p {
+        max-width: 41.6rem;
+    }
+
+    .s-hero .text .arrow {
+        bottom: 3.7rem;
+        left: 2rem;
+        max-width: 60px;
+    }
+}
+
+/* 560px monitor */
+@media(max-width: 560px) {
+    header {
+        height: 7.2rem;
+    }
+
+    header .logo {
+        max-width: 16rem;
+    }
+
+    .s-hero {
+        padding-top: 8.8rem;
+    }
+
+    .s-hero h1 {
+        font-size: 4rem;
+    }
+
+    .s-hero .text h1::before {
+        bottom: -0.6rem;
+    }
+
+    .s-hero .text p {
+        margin-top: 0.8rem;
+        margin-bottom: 2.4rem;
+        font-size: 1.6rem;
+    }
+
+    .s-hero .text .arrow {
+        display: none;
+    }
+
+    .s-hero .ilustra {
+        display: none;
+    }
+
+    .s-hero .ilustra-mobile {
+        display: block;
+        width: 110%;
+        max-width: 103%;
+    }
+
+    .s-hero::after {
+        height: 22rem;
+    }
+
+    .s-digital {
+        padding-top: 8rem;
+    }
+
+    .s-digital ul {
+        padding-bottom: 8rem;
+        gap: 6.4rem;
+    }
+
+    .s-digital h3 {
+        font-size: 2.8rem;
+    }
+
+    .s-art-front {
+        padding: 8rem 0;
+    }
+
+    .s-art-front .title-text h3 {
+        font-size: 2.8rem;
+        max-width: 22.7rem;
+        margin: 0 auto;
+    }
+
+    .s-art-front .title-text p {
+        font-size: 1.6rem;
+    }
+
+    .s-art-front .title-text .left p {
+        margin-top: 1.6rem;
+    }
+
+    .card-post {
+        padding: 1.6rem;
+    }
+
+    .card-post .image {
+        margin-bottom: 5.4rem;
+    }
+
+    .card-post .text h6 {
+        font-size: 1.8rem;
+    }
+
+    .card-post .text p {
+        font-size: 1.4rem;
+    }
+
+    .s-art-front .all {
+        gap: 3.2rem;
+    }
+
+    .s-newsletter h2 {
+        font-size: 4rem;
+    }
+
+    footer .main-area .right {
+        flex-direction: column;
+        align-items: center;
+        gap: 4.8rem;
+    }
+
+    footer .main-area .right .item-nav h6 {
+        text-align: center;
+    }
+
+    footer .main-area .right .item-nav ul li a {
+        justify-content: center;
+    }
+
+    footer .main-area .right .item-nav:last-child {
+        width: 100%;
+    }
+
+    footer .main-area .right .item-nav:last-child ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    footer .main-area .right .item-nav:last-child ul li:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    footer .main-area {
+        padding-bottom: 4.8rem;
+    }
+
+    footer .copy {
+        font-size: 1.4rem;
+        text-align: center;
+    }
 }
